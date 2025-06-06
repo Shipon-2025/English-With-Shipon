@@ -1,0 +1,17 @@
+{
+  "name": "english-with-shipon",
+  "version": "1.0.0",
+  "description": "An English learning platform...",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && mkdir -p dist && cp index.html metadata.json dist/ && esbuild index.tsx --bundle --outfile=dist/app.js --platform=browser --format=esm --jsx=automatic --loader:.ts=tsx --external:react --external:react-dom --external:react-router-dom --external:react/* --external:react-dom/* --define:process.env.API_KEY=\\\"$API_KEY_BUILD_ARG\\\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "esbuild": "^0.20.0",
+    "node-fetch": "^3.3.2"
+  }
+}
